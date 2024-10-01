@@ -5,13 +5,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MatskoIndustries Inc.</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
+        <header>
+            <br><br><br><br>
+            <img src="matskotrapstar.gif" alt="logo" style="max-width: 100%; height: auto;">
+        </header>
+
+        <section id="projets">
+            <h2>Mes Projets</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Projet 1: Site Web Perso</h3>
+                    <p>Un site personnel qui répertorie tous mes projets en programmation.</p>
+                    <a href="https://github.com/MatskoBinks/MonSitePerso" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project-item">
+                    <h3>Projet 2: Application de Suivi</h3>
+                    <p>Une application mobile pour suivre mes objectifs personnels et professionnels.</p>
+                    <a href="https://github.com/MatskoBinks/AppSuivi" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project-item">
+                    <h3>Projet 3: Jeu en JavaScript</h3>
+                    <p>Un jeu interactif créé avec JavaScript, HTML, et CSS.</p>
+                    <a href="https://github.com/MatskoBinks/JeuJS" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Passionné d'informatique et de cybersécurité, je suis toujours à la recherche de nouveaux défis. J'aime développer des projets innovants et partager mes connaissances.</p>
+        </section>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#about">À propos</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 MatskoIndustries Inc. Tous droits réservés.</p>
+            <p>Suivez-moi sur 
+                <a href="https://github.com/MatskoBinks" target="_blank">GitHub</a> | 
+                <a href="https://twitter.com/MatskoBinks" target="_blank">Twitter</a> | 
+                <a href="https://linkedin.com/in/MatskoBinks" target="_blank">LinkedIn</a>
+            </p>
+        </footer>
+
         <div id="bg"></div>
-    <script>
+        <script>
             window.addEventListener('DOMContentLoaded', () => {
                 VANTA.FOG({
                     el: "#bg",
@@ -20,16 +67,15 @@
                     gyroControls: false,
                     minHeight: 200.00,
                     minWidth: 200.00,
-                    highlightColor: 0xd200ff,
-                    midtoneColor: 0x5a008c,
-                    lowlightColor: 0xaa10b3,
+                    highlightColor: 0xfa00c8,
+                    midtoneColor: 0x0,
+                    lowlightColor: 0xfa00c8,
                     baseColor: 0x0,
                     blurFactor: 0.9,
-                    speed: 5.00,
+                    speed: 3.00,
                     zoom: 3
-                    })
-            })
-    </script>
-    <p></p>
+                })
+            });
+        </script>
     </body>
 </html>
