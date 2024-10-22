@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travaux Pratiques</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body>
+        <header>
+            <br><br><br><br>
+            <img src="../matskotrapstar.gif" alt="logo" style="max-width: 100%; height: auto;">
+        </header>
+
+        <section id="projets">
+            <h2></h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>TP1</h3>
+                    <a href="https://github.com/MatskoBinks/MonSitePerso">voir</a>
+                </div>
+                <div class="project-item">
+                    <h3>TP2</h3>
+                    <a href="https://github.com/MatskoBinks/AppSuivi">voir</a>
+                </div>
+                <div class="project-item">
+                    <h3>TP3</h3>
+                    <a href="\certifs\index.html">voir</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>à propos de moi</h2>
+            <p>salut je m'appelle mathis et j'aime bien l'informatique les cables etc je trouve ca cool ducoup je voudrais bien en faire mon métier normal
+                bref j'espere je vous ai convaincu bisou
+            </p>
+        </section>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#about">À propos</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2024 MatskoIndustries Inc. aucun droits réservés.</p>
+            <p>Suivez-moi sur 
+                <a href="https://github.com/matskobinks/" target="_blank">GitHub</a>
+            </p>
+        </footer>
+
+        <div id="bg"></div>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                VANTA.FOG({
+                    el: "#bg",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    highlightColor: 0x550046,
+                    midtoneColor: 0x0,
+                    lowlightColor: 0x0,
+                    baseColor: 0x0,
+                    blurFactor: 0.9,
+                    speed: 3.00,
+                    zoom: 3
+                })
+            });
+        </script>
+    </body>
+</html>
