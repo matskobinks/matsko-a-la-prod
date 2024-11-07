@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Feuille de Calcul Moderne - Thème Sombre</title>
+    <script>
+                function calculer(index) {
+            const prix = parseFloat(document.getElementById(`prix${index}`).value) || 0;
+            const quantite = parseFloat(document.getElementById(`quantite${index}`).value) || 0;
+            document.getElementById(`resultat${index}`).value = (prix * quantite).toFixed(2);
+        }
+
+        function reinitialiser() {
+            for (let i = 1; i <= 3; i++) {
+                document.getElementById(`article${i}`).value = '';
+                document.getElementById(`prix${i}`).value = '';
+                document.getElementById(`quantite${i}`).value = '';
+                document.getElementById(`resultat${i}`).value = '';
+            }
+            document.getElementById('totalResultat').value = '';
+        }
+
+        function calculerTotal() {
+            let total = 0;
+            for (let i = 1; i <= 3; i++) {
+                total += parseFloat(document.getElementById(`resultat${i}`).value) || 0;
+            }
+            document.getElementById('totalResultat').value = total.toFixed(2);
+        }
+
+        for (let i = 1; i <= 3; i++) {
+            document.getElementById(`prix${i}`).addEventListener('input', () => calculer(i));
+            document.getElementById(`quantite${i}`).addEventListener('input', () => calculer(i));
+        }
+    </script>
+</head>
+<body>
+    <h1 style="text-align: center; font-size: 2.5em; color: #4CAF50; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin-bottom: 20px; position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">Facture en JavaScript</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Article</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Résultats</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" placeholder="Article 1" id="article1"></td>
+                <td><input type="number" placeholder="Entrez le prix" id="prix1"></td>
+                <td><input type="number" placeholder="Entrez la quantité" id="quantite1"></td>
+                <td><input type="text" placeholder="Résultat" id="resultat1" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Article 2" id="article2"></td>
+                <td><input type="number" placeholder="Entrez le prix" id="prix2"></td>
+                <td><input type="number" placeholder="Entrez la quantité" id="quantite2"></td>
+                <td><input type="text" placeholder="Résultat" id="resultat2" readonly></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Article 3" id="article3"></td>
+                <td><input type="number" placeholder="Entrez le prix" id="prix3"></td>
+                <td><input type="number" placeholder="Entrez la quantité" id="quantite3"></td>
+                <td><input type="text" placeholder="Résultat" id="resultat3" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="reinitialiser()" style="background-color: #e74c3c;"><i class="fas fa-redo-alt"></i> Réinitialiser</button></td>
+                <td><button onclick="calculerTotal()"><i class="fas fa-calculator"></i> Calculer Total</button></td>
+                <td><input type="text" placeholder="Total" id="totalResultat" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
