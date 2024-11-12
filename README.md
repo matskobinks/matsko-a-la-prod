@@ -1,9 +1,9 @@
 
 # matskotrapstar beta
 
-version beta du portfolio
+portfolio mathis - bts sio 2024 
 
 
 ## Authors
 
-- moi (zizi)
+- moi (@matskobinks)
